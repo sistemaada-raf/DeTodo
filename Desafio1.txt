@@ -1,0 +1,260 @@
+Con el siguiente enunciado, complete los objetivos 1, 2, 3 y 4:
+
+Una persona puede retirar un libro de la biblioteca, 
+si una persona no entrega el libro a tiempo recibirá 
+una sanción por un periodo de tiempo;
+pasado dicho tiempo se deberá remover la sanción.
+
+
+
+1.- Identificar correctamente los objetos que intervienen en el enunciado.
+
+Usuario
+Libro
+Biblioteca
+Personal 
+Prestamo
+ 
+
+
+
+ 
+Usuario
+--------------------------------------------------Atributos
+-Cedula
+-Nombre
+-Apellido
+-Fecha Nacimiento
+-Telefono
+-Correo
+-Direccion
+-Lugar de Estudio
+-Carrera
+-Estado De Suspencion 
+-Fecha Suspencion Desde
+-Fecha Suspencion Hasta
+--------------------------------------------------Metodos 
+IncluirUsuario()
+ModificarUsuario()
+SolicitarLibro()
+RetirarLibro()
+EntregarLIbro()
+IncluirEstadoDeSuspencion()
+IncluirFechaSuspencionDesde()
+IncluirFechaSuspencionHasta()
+
+
+Libro
+--------------------------------------------------Atributos                                 
+-Codigo                                
+-Autor                                 
+-Titulo                                 
+-Especialidad                         
+-Edicion                               
+-Fecha De Publicacion                    
+-Idioma                                
+-Ubicacion
+-Cantidad De ejemplares
+-Cantidad Prestamo
+-Estadodel libro (prestamo,biblioteca,alta)
+--------------------------------------------------Metodos
+IncluirLibro()
+ModificarLibro()
+ELiminarLibro()
+CambiarCantidadPrestados()
+CambiarEstadodelLibro()
+
+
+
+
+
+
+
+Prestamo 
+--------------------------------------------------Atributos 
+-Cedula Personal
+-Cedula Usuario
+-Codigo Del Libro 
+-Fecha Prestamo
+-Fecha Limite de Devolucion
+-Fecha De Devolucion 
+-Estado Del Prestamo
+--------------------------------------------------Metodos 
+ 
+ IncluirPrestamo()
+ ModificarPrestamo()
+ EliminarPrestamo()
+ BuscarLIbro()
+ EntregarLibro()
+ RecibirLIbro()
+ HacerSancion()
+ IncluirFechaSuspencionDesde()
+ IncluirFechaSuspencionHasta()
+ RetirarSancion()
+ EstadoDePrestamo()
+
+
+
+
+Biblioteca 
+--------------------------------------------------Atributos                        
+ -Nombre                             
+ -Direccion                          
+ -Horario de trabajo                 
+ -Zonas Internas                               
+ -Personal
+ -Cedula
+ -Nombre
+ -Apellido
+ -Fecha Nacimiento
+ -Cargo
+ -Sueldo
+ -Computadora
+ -Mesas
+ -Estante
+ -Silla
+ 
+--------------------------------------------------Metodos                                                                    
+ IncluirLibro()
+ ModificarLibro()
+ ELiminarLibro()
+ CambiarCantidadenPrestamo()
+ CambiarEstadodelLibro()
+ IncluirMesa()
+ ModificarMesa()
+ ELiminarMesa()
+ IncluirEstante()
+ ModificarEstante()
+ ELiminarEstante()
+
+ 
+
+
+
+
+Indique cuales atributos de los objetos dados deberían estar ocultos y el porque
+ 
+
+     En Objeto Usuario :
+       -Estado De Suspencion         - El Usuario se podria colocar como Activo teniendo una penalizacion activa
+       -Fecha Suspencion Desde       - El Usuario no puede  este valor a su conveniencia pues la alteraria y crearia inconsistencia de datos con la realidad  
+     En Objeto Libro :
+       -Cantidad de ejemplares       -   NO podiran alterar el inventario real de los libros y es delicado.
+     En Objeto Prestamo :
+       -Fecha Limite de Devolucion   -   NO podiran alterar la Fecha De Devolucion prestamo pues se podria prestar a actos de corrupcion .
+     En Objeto Biblioteca :
+       - -Fecha Nacimiento           -   NO podiran alterarlo pues se crea inconsistencia de datos con el mundo real. 
+      
+
+Elaboré una lista con 5 ejemplos de objetos intangibles e identifique sus atributos y métodos.
+
+1.-)FrancionNumerica
+--------------------------------------------------Atributos
+  -Numerador
+  -Denominador
+--------------------------------------------------Metodos
+  Simplificar()
+  SumarConOtraFrancion()
+  RestarConOtraFrancion()
+
+
+2.-)Matrimonio
+--------------------------------------------------Atributos
+  -Cedula Conyugue1
+  -Nombre Conyugue1
+  -Sexo Conyugue1
+  -FechaNacimientoConyugue1
+  -Cedula Conyugue2
+  -Nombre Conyugue2
+  -Sexo Conyugue2
+  -FechaNacimientoConyugue2
+  -Fecha Matrimonio
+  -Lugar
+  -NombreTestigo1
+  -NombreTestigo2
+  -EstadoActual      
+--------------------------------------------------Metodos
+  CabezaDeHogar()
+  Proveedor()
+  Educador() 
+  AmarAlCompanero()
+  CrianzaDeLosHijo()
+  CuidadoDeLaCasa()
+  AlimentarFamilia()
+  TenerHijos()
+  SostendedeFamilia()
+  CambiodeEstado 
+
+
+3.-)Tiempo
+--------------------------------------------------Atributos
+-Tipo de Tiempo (Pasado,Presente,Futuro)
+-Tipo de Medicion (Tipo de Instrumento para medirlo) 
+-Unidad de Medida  (SEgundos,Minutos,Horas)
+ 
+--------------------------------------------------Metodos
+MedirInicio()
+MedirFinal()
+MedirTiempoTranscurrido()
+
+NOTA: El tiempo es una magnitud física creada para medir el intervalo en el que 
+suceden una serie ordenada de acontecimientos
+
+
+
+
+4.-)Clima
+--------------------------------------------------Atributos
+-Temperatura 
+-Humedad  
+-Presión atmosférica  
+-Viento  
+-Precipitación 
+-Fecha
+-Hora
+--------------------------------------------------Metodos
+MedirTemperaturaInicial() 
+MedirHumedadInicial()  
+MedirPresión atmosféricaInicial()  
+MedirVientoInicial()  
+MedirlPrecipitaciónInicial()
+RegistraFechaInical()
+RegistraHoraInical()  
+ModificarTemperatura() 
+ModificarHumedad()  
+ModificarPresión atmosférica()  
+ModificarViento()  
+ModificarPrecipitación()
+RegistraFechaModificacion()
+RegistraHoraModificacion()  
+MedirTemperaturaFinal()
+MedirHumedadFinal()     
+MedirVientoFinal()  
+MedirPrecipitaciónFinal()
+RegistraFechaFinal()
+RegistraHoraFinal()  
+
+
+
+NOTA:El clima es la estadística del tiempo atmosférico, 
+normalmente sobre un intervalo de 30 años
+
+
+
+
+ 
+5.-) ProgramaInformatico
+--------------------------------------------------Atributos
+-Nombre
+-Version
+-Fecha de Lanzamiento
+-Fecha de Actualizacion
+-Codido de Actualizacion
+-Lenguaje
+-TipodeCodigo 
+-Fecha Del Parche
+-CodidodeParche
+--------------------------------------------------Metodos
+HacerActualizacion ()
+HacerParche ()
+

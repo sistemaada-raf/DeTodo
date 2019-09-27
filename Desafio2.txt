@@ -1,0 +1,210 @@
+ 
+Analice el contexto organizacional de un Banco (no limitándose a una sede), 
+abarcando todo lo que necesita para funcionar, para luego realizar 
+las siguientes actividades:
+
+MI CONTEXTO:
+ Los BANCOS , disponen de un red de SUCURSALES, ellas estan conectadas por 
+ una red de COMPUTADORES controlada por PROGRAMAS cuya funcion es PROCESAR 
+ las TRANSACIONES que son realizadas en las ESTACIONES DE TRABAJO por el PERSONAL 
+ del BANCO o los CLIENTES ,estas TRANSACIONES operan sobre las CUENTAS de sus CLIENTES.
+
+
+1.- Describa los objetos (tangibles e intangibles) que están involucrados 
+en este contexto (sea lo más detallista posible)
+
+      BANCO       
+
+      SUCURSAL         
+ 
+      COMPUTADOR   
+
+      PROGRAMA     
+
+      PROCESAR   
+
+      TRANSACION         - TRANSACION CAJERO  - TRANSACION EN LA WEB 
+
+      ESTACIONDETRABAJO  - CAJERA AUTOMATICO  - CAJERO HUMANO - CAJERO EN LA WEB
+
+      PERSONAL           - DEPARTAMENTO       - FUNCIONES 
+
+      CUENTA  
+
+      CLIENTE 
+
+
+
+   Defina la clase Banco con la mayor cantidad de atributos simples posibles 
+   (atributos de tipos entero, real, alfanumérico, lógico). Indique al lado de
+   cada atributo el tipo de dato ,Defina al menos 3 atributos de la clase Banco 
+   que sean objetos de otra clase,Defina al menos 1 atributo que sea una colección 
+   de objetos de otra clase 
+
+
+    BANCO                                           
+
+   - codigoBanco       : Alfanumerico              
+   - nombreBanco       : Alfanumerico             
+   - direccionBanco    : Alfanumerico             
+   - ubicacion         : Alfanumerico                     
+   - capitalGeneral    : Real                     
+   - montoTotalDeposito: Real 
+   - montoTotalRetiro  : Real                     
+   - datoSucursal      : Sucurdal                 
+   - datoCuenta        : Cuenta                   
+   - datoCliente       : Cliente                  
+   - datoPersonal      : Personal                 
+   - datoTransaccion    : Transaccion               
+
+---------------------------------------------
+   + crearBanco()
+   + crearSucursal()
+   + ModificarSucursal()
+   + EliminarSucursal()
+   + crearCuenta()
+   + actualizarCuenta()
+   + crearCliente()
+   + ActualizarCliente()
+   + crearPersonal()
+   + ActualizarPersonal()
+   + montoTotalDeposito ()
+   + montoTotalRetiro ()
+
+
+
+
+     Sucursal
+
+   - codigoSucursal 	    : Alfanumerico 
+   - nombreSucursal 	    : Alfanumerico
+   - montoTotalDeposito     : Real 
+   - montoTotalRetiro       : Real            
+   - capitalGeneral         : Real 
+   - CodigoBanco            : Alfanumerico  
+   --------------------------------------------- 
+   + crearSucursal()
+   + ModificarSucursal()
+   + EliminarSucursal()
+   + ConsultaSucursal() 
+   + TotalClientes() 
+   + TotalCuentas()  
+   + montoTotalDeposito ()
+   + montoTotalRetiro ()
+ 
+    
+
+     Cuenta  
+
+   - numerodeCuenta         : Alfanumerico
+   - cedulaCliente          : clienteTitular                 -->  una cuenta puede tener 2 Titulares           clienteTitular   
+   - tipoDecuenta           : Alfanumerico 									- cedulaCliente          : Alfanumerico 
+   - Saldo                  : Real                                                                              - Titular                : Logica 
+   - codigoSucursal 	    : Alfanumerico                                                                               
+   - cedulaCliente          : Alfanumerico
+   - CodigoBanco            : Alfanumerico  
+  --------------------------------------------- 
+   + crearCuenta()
+   + ModificarCuenta()
+   + EliminarCuenta()
+   + ConsultaSaldoTotal()
+   + ConsultaTotalporTipo()
+   + buscarCliente()
+
+
+     Cliente
+
+  - cedulaCliente          : Alfanumerico 
+  - nombreCliente          : Alfanumerico 
+  - direccionFiscal        : Alfanumerico 
+  - codigoSucursal 	   : Alfanumerico 
+  - CodigoBanco            : Alfanumerico  
+ ---------------------------------------------
+   + crearCliente()
+   + ModificarCliente()
+   + EliminarCliente()
+   + consultaCedulaCliente()
+   + totalClientesporsucursal()
+   
+    Personal
+
+  - cedulaPersonal           : Alfanumerico 
+  - nombrePersonal           : Alfanumerico 
+  - direccionPersonal        : Alfanumerico 
+  - departamente             : Alfanumerico 
+  - Cargo                    : Alfanumerico
+  - codigoSucursal 	     : Alfanumerico 
+  - CodigoBanco              : Alfanumerico   
+  
+ --------------------------------------------- 
+   + crearPersonal()
+   + ModificarPersonal()
+   + EliminarPersonal()
+   + consultaCedulaPersonal()        
+   + actualizarPersonal ()
+
+
+      Transaccion 
+    
+   - numeroDeTransaccion    : Alfanumerico
+   - tipoTransaccion        : Alfanumerico
+   - fechaTransaccion       : Alfanumerico 
+   - MontoTransaccion       : Real 
+   - codigoSucursal 	    : Alfanumerico 
+   - codigoBanco            : Alfanumerico  
+   - numerodeCuenta         : Alfanumerico
+   - cedulaCliente          : Alfanumerico 
+  
+
+---------------------------------------------
+   + crearTransaccion()
+   + buscarCliente()
+   + buscarSucursal()
+   + buscarBanco()
+   + actualizarSaldocliente()
+
+
+
+
+
+
+
+
+5.- Generalice por lo menos a 2 clases en una super clase, indicando 
+claramente de cual clase hereda cada sub clase
+
+
+
+                                                       ESTACIONDETRABAJO    (Super Clase)
+
+                                                    - codigoEstaciondetrabajo     : Alfanumerico
+                                                    - Ubicacion                   : Alfanumerico
+                                		    - tipodeTransaccion           : Transaccion
+                                                   
+  					                           !
+                                                                   ! 
+                                                                   !
+                                                                   !
+                                                                   !
+         ----------------------------------------------------------------------------------------------------------------
+         !							   !							!	
+  	 !							   !							!
+	 !							   !							!
+ 	
+                          
+     CAJERO AUTOMATICO                                          CAJERO HUMANO                                     EN LA WEB
+ 
+  - TarjetaFisica      	      : Alfanumerico                                                                       -usuario     : Alfanumerico   
+  - contrasena                : Alfanumerico             - Dinero                    : Alfanumerico                -Contrasena  : Alfanumerico     
+  - Dinero                    : Alfanumerico             - numeroRecibiOperacion     : Alfanumerico
+  - numeroRecibiOperacion     : Alfanumerico               
+
+
+   
+   
+ 
+  
+
+
+
+
